@@ -1,0 +1,148 @@
+2.
+slownik = {16: 25, 38: 49}
+print(slownik)
+slownik.update({1: 2})
+print(slownik) 
+
+
+3.
+s1 = {16: 25, 38: 49}
+s2 = {26: 35, 48: 59}
+s3 = {36: 45, 58: 69}
+s4 = {}
+for x in (s1, s2, s3):
+    s4.update(x)
+print(s4) 
+
+
+4.
+s = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+def obecny(x):
+    if x in s:
+        print('Klucz jest obecny w slowniku')
+    else:
+        print('Klucz nie jest obecny w slowniku')
+obecny(5)
+obecny(9) 
+
+
+5.
+s = {'x': 10, 'y': 20, 'z': 30}
+for klucz, wartosc in s.items():
+    print(klucz, '->', wartosc)	
+	
+	
+6.
+i = int(input("Wpisz numer "))
+s = dict()
+for x in range(1, i + 1):
+    s[x] = x * x
+print(s) 
+
+
+7.
+s = dict()
+for x in range(1, 16):
+    s[x] = x ** 2
+print(s)
+
+
+8.
+s1 = {'a': 16, 'b': 38}
+s2 = {'x': 49, 'y': 25}
+s = s1.copy()
+s.update(s2)
+print(s) 
+
+
+9.
+s = {'Czerwony': 16, 'Zielony': 38, 'Niebieski': 25}
+for klucz, wartosc in s.items():
+    print(klucz, 'odpowiada numerowi ', s[klucz]) 
+	
+
+10.
+s = {'l1': 16, 'l2': 38, 'l3': 49}
+suma = sum(s.values())
+print(suma) 
+
+
+11.
+s = {'data1': 16, 'data2': 38, 'data3': 49}
+mnoz = 1
+for klucz in s:
+    mnoz = mnoz * s[klucz]
+print(mnoz) 
+
+
+12.
+s = {'Kosmos': 16, 'Gwiazda': 38, 'Ksiezyc': 49, 'Statek': 11}
+print(s)
+if 'Kosmos' in s:
+    del s['Kosmos']
+print(s)
+
+
+13.
+klucze = ['Czerwony', 'Zielony', 'Niebieski']
+wartosci = ['#FF0000', '#008000', '#0000FF']
+kolory = dict(zip(klucze, wartosci))
+print(kolory)
+
+
+15.
+s = {'x': 16, 'y': 38, 'z': 11}
+k_max = max(s.keys(), key=(lambda k: s[k]))
+k_min = min(s.keys(), key=(lambda k: s[k]))
+print('Najwieksza wartosc: ', s[k_max])
+print('Najmniejsza wartosc: ', s[k_min])
+
+
+18.
+s = {}
+if not bool(s):
+    print("Slownik jest pusty")
+	
+	
+19.
+from collections import Counter
+s1 = {'Kosmos': 16, 'Gwiazda': 38, 'Ksiezyc': 49}
+s2 = {'Kosmos': 38, 'Gwiazda': 11, 'Statek': 16}
+s = Counter(s1) + Counter(s2)
+print(s)
+
+
+24.
+from collections import defaultdict, Counter
+str = 'Kosmos'
+s = {}
+for letter in str:
+    s[letter] = s.get(letter, 0) + 1
+print(s) 
+
+
+25.
+s = {'C1': [1, 2, 3], 'C2': [5, 6, 7], 'C3': [9, 10, 11]}
+for row in zip(*([klucz] + (wartosc) for klucz, wartosc in sorted(s.items()))):
+    print(*row)
+	
+
+26.
+uczen = [{'id': 1, 'zdane': True, 'imie': 'Lary'},
+ {'id': 2, 'zdane': False, 'imie': 'Rabi'},
+ {'id': 3, 'zdane': True, 'imie': 'Alex'}]
+print(sum(d['id'] for d in uczen))
+print(sum(d['zdane'] for d in uczen))
+
+
+31.
+s = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+print("klucz  wartosc  liczba")
+for liczba, (klucz, wartosc) in enumerate(s.items(), 1):
+    print(klucz, '   ', wartosc, '    ', liczba) 
+	
+	
+35.
+from collections import Counter
+x = Counter({'Kosmos': 16, 'Gwiazda': 38, 'Ksiezyc': 49})
+print(x.most_common())
