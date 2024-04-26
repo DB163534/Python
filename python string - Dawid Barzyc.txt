@@ -1,0 +1,27 @@
+1
+def string_len(str):
+  
+  string = len(str)
+  return string
+  
+print (string_len('wyraz'))
+
+
+2
+def numeracja(str):
+   baza = {}
+   for n in str:
+      litery = baza.keys()
+      if n in litery:
+         baza[n] += 1
+      else:
+         baza[n] = 1
+   return baza
+print (numeracja('google'))
+
+3
+def twoletter(str):
+   if len(str) < 2:
+      return ''
+   return str[0:2] + str[-2:]
+print(twoletter('w3resource'))
