@@ -1,0 +1,208 @@
+1.
+l = []
+for x in range(1500, 2701):
+    if (x % 7 == 0) and (x % 5 == 0):
+        l.append(str(x))
+print(','.join(l))
+
+
+3.
+import random
+wynik, los = random.randint(1, 10), 0
+while wynik != los:
+    los = int(input('Zgadnij numer od 1 do 10, do momentu az nie zgadniesz: '))
+print('Zgadles!') 
+
+
+4.
+l = 5
+for x in range(l):
+    for i in range(x):
+        print('* ', end="")
+    print('')
+for x in range(l, 0, -1):
+    for i in range(x):
+        print('* ', end="")
+    print('') 
+	
+	
+5.
+str = input("Wpisz slowo do odwrocenia: ")
+for char in range(len(str) - 1, -1, -1):
+    print(str[char], end="")
+	
+	
+6.
+numery = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+n = 0
+p = 0
+for x in numery:
+    if not x % 2:
+        p += 1
+    else:
+        n += 1
+print("Liczba parzystych numerow:", p)
+print("Liczba nieparzystych numerow:", n) 
+
+
+7.
+lista = [21, 42.32, 3+6j, False, 'Kosmos', (1, -15), [2, 13], {"Klasa": 'IV', "Sekcja": 'C'}]
+for item in lista:
+    print("Typ", item, "to", type(item)) 
+	
+
+8.
+for i in range(6):
+    if (i == 3 or i == 6):
+        continue
+    print(i, end=' ')
+	
+	
+9.
+x, y = 0, 1
+while y < 50:
+    print(y)
+    x, y = y, x + y
+	
+	
+14.
+s = input("Wpisz wyraz: ")
+d = l = 0
+for c in s:
+    if c.isdigit():
+        d = d + 1
+    elif c.isalpha():
+        l = l + 1
+    else:
+        pass
+print("Liter:", l)
+print("Cyfr: ", d)
+
+
+16.
+lista = []
+for i in range(100, 401):
+    s = str(i)
+    if (int(s[0]) % 2 == 0) and (int(s[1]) % 2 == 0) and (int(s[2]) % 2 == 0):
+        lista.append(s)
+print(",".join(lista))
+
+
+17.
+wynik = ""
+for wiersz in range(0, 7):
+    for kolumna in range(0, 7):
+        if (((kolumna == 1 or kolumna == 5) and wiersz != 0) or ((wiersz == 0 or wiersz == 3) and (kolumna > 1 and kolumna < 5))):
+            wynik = wynik + "*"
+        else:
+            wynik = wynik + " "
+    wynik = wynik + "\n"
+print(wynik) 
+
+
+18.
+wynik = ""
+for wiersz in range(0, 7):
+    for kolumna in range(0, 7):
+        if (kolumna == 1 or ((wiersz == 0 or wiersz == 6) and (kolumna > 1 and kolumna < 5)) or (kolumna == 5 and wiersz != 0 and wiersz != 6)):
+            wynik = wynik + "*"
+        else:
+            wynik = wynik + " "
+    wynik = wynik + "\n"
+print(wynik)
+
+
+19.
+wynik = ""
+for wiersz in range(0, 7):
+    for kolumna in range(0, 7):
+        if (kolumna == 1 or ((wiersz == 0 or wiersz == 6) and (kolumna > 1 and kolumna < 6)) or (wiersz == 3 and kolumna > 1 and kolumna < 5)):
+            wynik = wynik + "*"
+        else:
+            wynik = wynik + " " 
+    wynik = wynik + "\n"
+print(wynik)
+
+
+20.
+wynik = ""
+for wiersz in range(0, 7):
+    for kolumna in range(0, 7):
+        if ((kolumna == 1 and wiersz != 0 and wiersz != 6) or ((wiersz == 0 or wiersz == 6) and kolumna > 1 and kolumna < 5) or (wiersz == 3 and kolumna > 2 and kolumna < 6) or (kolumna == 5 and wiersz != 0 and wiersz != 2 and wiersz != 6)):
+            wynik = wynik + "*"
+        else:
+            wynik = wynik + " "
+    wynik = wynik + "\n"
+print(wynik) 
+
+
+21.
+wynik = ""
+for wiersz in range(0, 7):
+    for kolumna in range(0, 7):
+        if (kolumna == 1 or (wiersz == 6 and kolumna != 0 and kolumna < 6)):
+            wynik = wynik + "*"
+        else:
+            wynik = wynik + " "
+    wynik = wynik + "\n"
+print(wynik) 
+
+
+22.
+wynik = ""
+for wiersz in range(0, 7):
+    for kolumna in range(0, 7):
+        if (kolumna == 1 or kolumna == 5 or (wiersz == 2 and (kolumna == 2 or kolumna == 4)) or (wiersz == 3 and kolumna == 3)):
+            wynik = wynik + "* "
+        else:
+            wynik = wynik + "  "
+    wynik = wynik + "\n"
+print(wynik)
+
+
+23.
+wynik = ""
+for wiersz in range(0, 7):
+    for kolumna in range(0, 7):
+        if (((kolumna == 1 or kolumna == 5) and wiersz != 0 and wiersz != 6) or ((wiersz == 0 or wiersz == 6) and kolumna > 1 and kolumna < 5)):
+            wynik = wynik + "*"
+        else:
+            wynik = wynik + " "
+    wynik = wynik + "\n"
+print(wynik) 
+
+
+24.
+wynik = ""
+for wiersz in range(0, 7):
+    for kolumna in range(0, 7):
+        if (kolumna == 1 or ((wiersz == 0 or wiersz == 3) and kolumna > 0 and kolumna < 5) or ((kolumna == 5 or kolumna == 1) and (wiersz == 1 or wiersz == 2))):
+            wynik = wynik + "*"
+        else:
+            wynik = wynik + " "
+    wynik = wynik + "\n"
+print(wynik)
+
+
+25.
+wynik = ""
+for wiersz in range(0, 7):
+    for kolumna in range(0, 7):
+        if (kolumna == 1 or ((wiersz == 0 or wiersz == 3) and kolumna > 1 and kolumna < 5) or (kolumna == 5 and wiersz != 0 and wiersz < 3) or (kolumna == wiersz - 1 and wiersz > 2)):
+            wynik = wynik + "*"
+        else:
+            wynik = wynik + " "
+    wynik = wynik + "\n"
+print(wynik) 
+
+
+27.
+wynik="";    
+for wiersz in range(0,7):    
+    for kolumna in range(0,7):     
+        if (kolumna == 3 or (wiersz == 0 and kolumna > 0 and kolumna <6)):  
+            wynik=wynik+"*"    
+        else:      
+            wynik=wynik+" "    
+    wynik=wynik+"\n"    
+print(wynik);
