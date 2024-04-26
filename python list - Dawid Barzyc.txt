@@ -1,0 +1,138 @@
+1.
+def suma(lista):
+    numery = 0
+    for x in lista:
+        numery += x
+    return numery
+print(suma([78, 22, 15]))
+
+
+2.
+def mnoz(lista):
+    numery = 1
+    for x in lista:
+        numery *= x
+    return numery
+print(mnoz([78, 22, 15]))
+
+
+3.
+def l_max(lista):
+    max = lista[0]
+    for x in lista:
+        if x > max:
+            max = x
+    return max
+print(l_max([78, 22, 15]))
+
+
+4.
+def l_min(lista):
+    min = lista[0]
+    for x in lista:
+        if x < min:
+            min = x
+    return min
+print(l_min([78, 22, 15])) 
+
+
+8.
+lista = []
+if not lista:
+    print("Lista jest pusta")
+	
+	
+9.
+originalna = [78, 22, 15]
+nowa = originalna
+print(originalna)
+print(nowa)
+
+
+13.
+trzyd = [[['*' for col in range(6)] for col in range(4)] for row in range(3)]
+print(trzyd)
+
+
+14.
+num = [78, 22, 15]
+num = [x for x in num if x % 2 != 0]
+print(num)
+
+
+15.
+from random import shuffle
+kolor = ['Czerwony', 'Zielony', 'Niebieski', 'Zolty', 'Brazowy', 'Szary']
+shuffle(kolor)
+print(kolor)
+
+
+18.
+import itertools
+print(list(itertools.permutations([78, 22, 15])))
+
+
+21.
+zloz = ['k', 'o', 's', 'm', 'o', 's']
+str = ''.join(zloz)
+print(str)
+
+
+22.
+lista = [78, 22, 15]
+print(lista.index(22))
+
+
+24.
+lista1 = [78, 22, 15]
+lista2 = ['Kosmos', 'Gwiazda', 'Ksiezyc']
+finalna = lista1 + lista2
+print(finalna)
+
+25.
+import random
+kolory = ['Czerwony', 'Zielony', 'Niebieski', 'Zolty', 'Brazowy', 'Szary']
+print(random.choice(kolory))
+
+
+37.
+color1 = "Czerwony", "Zielony", "Niebieski", "Zolty"
+color2 = "Zielony", "Brazowy", "Czerwony", "Szary"
+print(set(color1) & set(color2))
+
+
+43.
+kolor = [
+    ("Black", "#000000", "rgb(0, 0, 0)"),
+    ("Red", "#FF0000", "rgb(255, 0, 0)"),
+    ("Yellow", "#FFFF00", "rgb(255, 255, 0)")]
+jeden, dwa, trzy = kolor
+print(jeden)
+print(dwa)
+print(trzy)
+
+
+46.
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(lista[::2])
+
+
+48.
+kolory = [['Czerwony'], ['Zielony'], ['Niebieski']]
+print('\n'.join([str(x) for x in kolory])) 
+
+
+53.
+import itertools
+x = itertools.count()
+print(next(x))
+print(next(x))
+print(next(x))
+print(next(x))
+print(next(x)) 
+
+
+54.
+kolor = ['Czerwony', 'Zielony', 'Niebieski']
+print('-'.join(kolor))
+print(''.join(kolor)) 
